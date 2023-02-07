@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import HandIcon from "../assets/svgs/Hand.svg";
+import HandIcon from "../assets/svgs/hand.svg";
 import DownArrow from "../assets/svgs/down-arrow.svg";
 
 function Welcome() {
