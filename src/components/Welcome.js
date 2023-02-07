@@ -6,9 +6,9 @@ import DownArrow from "../assets/svgs/down-arrow.svg";
 function Welcome() {
   return (
     <div>
-      <div className="mt-6 flex justify-between items-center p-4">
+      <div className="mt-6 flex justify-between items-center  px-4 py-4 transition-all lg:px-10 lg:py-6">
         <div>
-          <div className="flex gap-4 items-center">
+          <div className="flex gap-2 items-center">
             <Image
               src={HandIcon}
               alt="veerge-logo"

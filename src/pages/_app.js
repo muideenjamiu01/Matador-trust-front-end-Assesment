@@ -1,7 +1,12 @@
 import "@/styles/globals.css";
 import Head from "next/head";
+import React from "react";
+// import type { AppProps } from "next/app";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
 
 export default function App({ Component, pageProps }) {
+  const [queryClient] = React.useState(() => new QueryClient());
   return (
     <>
       <Head>
@@ -11,7 +16,11 @@ export default function App({ Component, pageProps }) {
           url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
         </style>
       </Head>
+      // Provide the client to your App
+      <QueryClientProvider client={queryClient}>
       <Component {...pageProps} />
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
     </>
   );
 }
