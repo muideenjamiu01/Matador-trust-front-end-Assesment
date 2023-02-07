@@ -6,7 +6,7 @@ import SearchIcon from "../assets/svgs/Search.svg";
 
 function NavMenu(props) {
   return (
-    <div>
+    <div className="hidden md:block">
       <div className=" mt-24 flex gap-x-16 items-center shadow-lg  px-4 py-4 transition-all lg:px-10 lg:py-6">
         {navLinks.map((link, index) => {
           return (

@@ -48,10 +48,10 @@ function Overview({dashboardData}) {
               </div>
             </div>
             <div>
-              <div className="p-3 flex gap-x-2 items-center rounded-xl border border-[#4545FE] cursor-pointer">
-                <Image src={DownloadIcon} alt="download-icon" />
-                <div className="text-[#4545FE]">Download Report</div>
-                <Image src={DownArrow} alt="down-arrow-icon" />
+              <div className="p-2 lg:p-3 flex gap-x-2 items-center rounded-xl border border-[#4545FE] cursor-pointer">
+                <Image src={DownloadIcon} alt="download-icon" className="hidden sm:block" />
+                <div className="text-[#4545FE] font-medium  text-[10px] sm:text-xs">Download Report</div>
+                <Image src={DownArrow} alt="down-arrow-icon"  />
               </div>
             </div>
           </div>
@@ -67,8 +67,8 @@ function Overview({dashboardData}) {
             </button>
           </div>
           <hr />
-          <div className="md:flex gap-x-2 items-center mt-4">
-            <div className="w-full md:w-1/2">
+          <div className="lg:flex gap-x-2 items-center mt-4">
+            <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
               <Chart />
             </div>
             <div className="w-full md:w-1/2">
@@ -90,7 +90,7 @@ function Overview({dashboardData}) {
                     </div>
                   </div>
                 </div>
-                <div className="rounded-xl border flex flex-col justify-center border-[#E4E4E4] p-2">
+                <div className="rounded-xl border flex flex-col justify-center border-[#E4E4E4] p-2 mt-4 md:mt-0">
                   <div className="mb-2 text-[₦ 800,000,000.00] font-semibold text-lg">
                   ₦{dashboardData?.deposits.total}
                   {/* <span className="text-[#E4E4E4]">.00</span> */}
@@ -126,7 +126,7 @@ function Overview({dashboardData}) {
                     </div>
                   </div>
                 </div>
-                <div className="rounded-xl border flex flex-col justify-center border-[#E4E4E4] p-2">
+                <div className="rounded-xl border flex flex-col justify-center border-[#E4E4E4] p-2 mt-4 md:mt-0">
                   <div className="mb-2 text-[#4545FE] font-semibold text-lg">
                     ₦120,000,000<span className="text-[#E4E4E4]">.00</span>
                   </div>
@@ -219,10 +219,10 @@ function Overview({dashboardData}) {
               </div>
             </div>
             <div className="">
-              <div className="rounded-xl border p-2 flex justify-between items-center">
+              <div className="rounded-xl border p-2 flex justify-between items-start md:mt-7  ">
                 <div className="">
                   <div className="mb-2 text-2xl font-normal leading-8">{dashboardData?.most_watchlisted.total_projects_on_watchlist}</div>
-                  <div className="">Number of watchlists</div>
+                  <div className="font-medium text-xs">Number of watchlists</div>
                 </div>
                 <div>
                   {" "}
@@ -236,7 +236,7 @@ function Overview({dashboardData}) {
             </div>
             <div className="w-full md:w-1/2"></div> */}
         </div>
-        <div className="rounded-2xl border shadow-lg p-4 md:max-w-md">
+        <div className="rounded-2xl border shadow-lg p-4 md:max-w-md md:mx-auto">
           <div className="flex justify-between items-center mb-6 mt-2">
             <div>
               <div className="mb-2 text-[#191919] font-semibold text-3xl">

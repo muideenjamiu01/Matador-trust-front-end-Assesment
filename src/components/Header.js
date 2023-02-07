@@ -12,12 +12,15 @@ import UpArrow from "../assets/svgs/up-arrow.svg";
 import UserImage from "../assets/svgs/user-profile.svg";
 
 export default function Header() {
+  // const [toggle, setToggle] = useState(false);
+  // const handleToggle = () => setToggle(!toggle);
   return (
     <header className="bg-[#191919]">
       <div className="flex items-center justify-center">
         <Image src={Logo} alt="veerge-logo" width="100px" height="100px" />
       </div>
-      <div className="flex gap-6 items-center">
+<div className="hidden md:block">
+<div className="flex gap-6 items-center cursor-pointer ">
         <div className="flex gap-2 items-center">
           <div className="flex justify-center">
             {" "}
@@ -48,10 +51,9 @@ export default function Header() {
             height="100px"
           />
         </div>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 items-center ">
           <div
-            className="h-8 w-8 rounded-full border-2 border-[
-#4545FE] bg-gradient-to-b from-[#E3F3FF] to-[#99FFC9] "
+            className="h-8 w-8 rounded-full border-2 border-[#4545FE] bg-gradient-to-b from-[#E3F3FF] to-[#99FFC9] "
           >
             {" "}
             <Image
@@ -65,6 +67,7 @@ export default function Header() {
           <Image src={UpArrow} alt="veerge-logo" width="100px" height="100px" />
         </div>
       </div>
+</div>
     </header>
   );
 }
