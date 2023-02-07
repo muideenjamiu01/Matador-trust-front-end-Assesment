@@ -6,7 +6,7 @@ import DownArrow from "../assets/svgs/down-arrow.svg";
 function Welcome() {
   return (
     <div>
-      <div className="mt-6 flex justify-between items-center  px-4 py-4 transition-all lg:px-10 lg:py-6">
+      <div className="mt-16 md:mt-6 flex justify-between items-center  px-4 py-4 transition-all lg:px-10 lg:py-6">
         <div>
           <div className="flex gap-2 items-center">
             <Image

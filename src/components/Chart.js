@@ -81,8 +81,8 @@ const data = {
 function Chart() {
  
   return (
-    <div className="h-72 2xl:h-96 w-full flex justify-center">
-      <Bar data={data}  height={300} options={options} />
+    <div className="h-full w-full lg:h-72 2xl:h-96  ">
+      <Bar data={data}  height={300}  options={options} />
     </div>
   )
 }
