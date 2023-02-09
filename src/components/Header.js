@@ -15,9 +15,9 @@ export default function Header() {
   // const [toggle, setToggle] = useState(false);
   // const handleToggle = () => setToggle(!toggle);
   return (
-    <header className="bg-[#191919]">
+    <header className=" bg-[#191919]">
       <div className="flex items-center justify-center">
-        <Image src={Logo} alt="veerge-logo" width="100px" height="100px" />
+        <Image src={Logo} alt="veerge-logo" width="100px" height="10px" />
       </div>
 <div className="hidden md:block">
 <div className="flex gap-6 items-center cursor-pointer ">

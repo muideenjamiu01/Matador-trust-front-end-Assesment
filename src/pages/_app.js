@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }) {
           url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
         </style>
       </Head>
-      // Provide the client to your App
+      {/* // Provide the client to your App */}
       <QueryClientProvider client={queryClient}>
       <Component {...pageProps} />
       <ReactQueryDevtools initialIsOpen={false} />
