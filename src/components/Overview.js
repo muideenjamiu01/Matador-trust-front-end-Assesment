@@ -12,6 +12,7 @@ import balanceImage from "../assets/svgs/balance.svg";
 import NextIcon from "../assets/svgs/next.svg";
 import PropertyOverview from "@/components/PropertyOverview";
 import CustomerOverview from "./CustomerOverview";
+import { formatMoney } from "@/utils/moneyFormat"
 
 import axios from "axios"
 import { useQuery } from "react-query";
@@ -75,7 +76,7 @@ function Overview({dashboardData}) {
               <div className=" md:flex  gap-x-4 mb-4 ">
                 <div className="rounded-xl border flex flex-col justify-center border-[#E4E4E4] p-2">
                   <div className="mb-2 text-[#4545FE] font-semibold text-lg">
-                  ₦{dashboardData?.wallet.total}
+                  ₦{formatMoney.format(`${dashboardData?.wallet.total}`)}
                   {/* <span className="text-[#E4E4E4]">.00</span> */}
                   </div>
                   <div className="flex gap-x-2 items-center ">
@@ -92,7 +93,7 @@ function Overview({dashboardData}) {
                 </div>
                 <div className="rounded-xl border flex flex-col justify-center border-[#E4E4E4] p-2 mt-4 md:mt-0">
                   <div className="mb-2 text-[₦ 800,000,000.00] font-semibold text-lg">
-                  ₦{dashboardData?.deposits.total}
+                  ₦{formatMoney.format(`${dashboardData?.deposits.total}`)}
                   {/* <span className="text-[#E4E4E4]">.00</span> */}
                   </div>
                   <div className="flex gap-x-2 items-center ">
@@ -111,7 +112,7 @@ function Overview({dashboardData}) {
               <div className="md:flex gap-x-4 ">
                 <div className="rounded-xl border flex flex-col justify-center border-[#E4E4E4] p-2">
                   <div className=" mb-2 text-[#FF6A6A] font-semibold text-lg">
-                  ₦{dashboardData?.withdrawals.total}
+                  ₦{formatMoney.format(`${dashboardData?.withdrawals.total}`)}
                   {/* <span className="text-[#E4E4E4]">.00</span> */}
                   </div>
                   <div className="flex gap-x-2 items-center ">
